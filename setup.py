@@ -18,7 +18,7 @@ setup(
     url='https://github.com/Mamdasn/im2dhist',
     description='This small piece of code is intended to help researchers, especially those in field of image processing, to easily calculate two dimensional histogram of a given image.',
     long_description=LONG_DESCRIPTION,
-    long_description_content_type="text/markdown",
+    long_description_content_type="markdown",
     license=LICENSE,
     packages=find_packages(),
     install_requires=[
