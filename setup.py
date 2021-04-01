@@ -25,7 +25,7 @@ setup(
     keywords=['python', 'histogram', 'imhist', '2dhist', 'hist2d'],
     classifiers=[
         "Development Status :: 1 - Planning",
-        "Intended Audience :: Researchers",
+        "Intended Audience :: Science/Research",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3.8",
         "Operating System :: OS Independent",
