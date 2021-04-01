@@ -21,14 +21,14 @@ import matplotlib.pyplot as plt
 def main():
     image_name = 'Plane.jpg'
     image = cv2.imread(image_name)
-    # convert rgb image to gray
+    # converts rgb image to gray
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-    # 2*w_neighboring+1 is width of the square window on every pixel, when counting neiboring pixels
+    # 2*w_neighboring+1 is width of the square window around each pixel, when counting neiboring pixels
     # calculate 2 dimensional histogram of gray_image
     v_image_2DHisteq = im2dhist(gray_image, w_neighboring=6, showProgress = True)
 
-    # plot 2D-Histogram
+    # plots 2D-Histogram
     [K, _] = v_image_2DHisteq.shape
     x = np.outer(np.arange(0, K), np.ones(K))
     y = x.copy().T 

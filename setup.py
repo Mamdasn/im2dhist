@@ -10,11 +10,11 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 setup(
     name='im2dhist',
-    version='0.1.0',
+    version='0.1.0.1',
     author="mamdasn s",
     author_email="<mamdassn@gmail.com>",
     url="https://github.com/Mamdasn/im2dhist",
-    description='This small piece of code is intended to help researchers, especially those in field of image processing, to easily calculate two dimensional histogram of a given image.',
+    description='Calculate two dimensional histogram of a given image.',
     long_description=long_description,
     long_description_content_type = "text/markdown",
     package_dir={'': 'src'},
