@@ -46,6 +46,6 @@ if __name__ == '__main__': main()
 
 ## Output
 This is a sample image
-![Plane.jpg image](https://github.com/Mamdasn/im2dhist/blob/main/assests/Plane.jpg "Plane.jpg image")
+![Plane.jpg image](https://raw.githubusercontent.com/Mamdasn/im2dhist/main/assests/Plane.jpg "Plane.jpg image")
 Two dimensional histogram of the sample image
-![Two dimensional histogram](https://github.com/Mamdasn/im2dhist/blob/main/assests/Plane-big-2D-Histogram.jpeg "Two dimensional histogram")
+![Two dimensional histogram](https://raw.githubusercontent.com/Mamdasn/im2dhist/main/assests/Plane-big-2D-Histogram.jpeg "Two dimensional histogram")
