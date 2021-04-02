@@ -43,3 +43,9 @@ def main():
     plt.show()
 if __name__ == '__main__': main()
 ```
+
+## Output
+This is a sample image
+![Plane.jpg image](/assets/Plane.jpg "Plane.jpg image")
+Two dimensional histogram of the sample image
+![Two dimensional histogram](/assets/Plane.jpg "Two dimensional histogram")
