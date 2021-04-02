@@ -1,5 +1,5 @@
 # im2dhist
-This small piece of code is intended to help researchers, especially in the field of image processing, to easily calculate two dimensional histogram of a given image.
+This small piece of code is intended to help researchers, especially in field of image processing, to easily calculate two dimensional histogram of a given image.
 
 ## How it works
 A moving window of w*w moves through out the given image, and as its center places on each pixel, number of encounters with same and other brightness intensities is counted seperately. This package basically outputs a normalized two dimensional numpy array of brightness intensity encounters.  
