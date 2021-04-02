@@ -1,3 +1,8 @@
+include *.in
 include *.txt
 include LICENSE
+recursive-include assests *.jpeg
+recursive-include assests *.jpg
+recursive-include assests *.npy
 recursive-include src *.py
+recursive-include tests *.py
