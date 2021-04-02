@@ -48,7 +48,7 @@ def main():
 if __name__ == '__main__': main()
 ```
 
-## Output
+## Showcase
 This is a sample image
 ![Plane.jpg image](https://raw.githubusercontent.com/Mamdasn/im2dhist/main/assests/Plane.jpg "Plane.jpg image")
 Two dimensional histogram of the sample image
