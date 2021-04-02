@@ -8,7 +8,7 @@ def test_im2dhist_with_param():
     # convert rgb image to gray
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-    # 2*w_neighboring+1 is width of the square window on every pixel, when counting neiboring pixels
+    # 2*w_neighboring+1 is width of the square window around each pixel, when counting neiboring pixels
     # calculate 2 dimensional histogram of gray_image
     v_image_2DHisteq = im2dhist(gray_image, w_neighboring=6, showProgress = True)
     # np.save(f'{image_name}-2D-Histogram', v_image_2DHisteq)
