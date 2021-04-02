@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 def test_im2dhist_with_param():
-    image_name = '../assests/Plane.jpg'
+    image_name = '../blob/main/assests/Plane.jpg'
     image = cv2.imread(image_name)
     # convert rgb image to gray
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
