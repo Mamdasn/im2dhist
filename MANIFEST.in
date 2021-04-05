@@ -1,8 +1,8 @@
 include *.in
 include *.txt
 include LICENSE
-recursive-include assests *.jpeg
-recursive-include assests *.jpg
-recursive-include assests *.npy
+recursive-include assets *.jpeg
+recursive-include assets *.jpg
+recursive-include assets *.npy
 recursive-include src *.py
 recursive-include tests *.py

@@ -10,7 +10,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 setup(
     name='im2dhist',
-    version='0.1.0.8',
+    version='0.1.0.9',
     author="mamdasn s",
     author_email="<mamdassn@gmail.com>",
     url="https://github.com/Mamdasn/im2dhist",
@@ -24,7 +24,7 @@ setup(
         "numpy", 
         "tqdm",
         ],
-    keywords=['python', 'histogram', 'imhist', '2dhist', 'hist2d'],
+    keywords=['python', 'histogram', 'imhist', '2dhist', 'hist2d', 'two dimensional histogram'],
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Science/Research",
