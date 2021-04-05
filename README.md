@@ -3,7 +3,7 @@ This small piece of code is intended to help researchers, especially in field of
 
 ## How it works
 A moving window of w*w moves through out the given image, and as its center places on each pixel, number of encounters with same and other brightness intensities is counted seperately. This package basically outputs a normalized two dimensional numpy array of brightness intensity encounters.  
-![How moving window works](https://raw.githubusercontent.com/Mamdasn/im2dhist/main/assests/how-it-works-window-kernel-title.jpg "How moving window works")
+![How moving window works](https://raw.githubusercontent.com/Mamdasn/im2dhist/main/assets/how-it-works-window-kernel-title.jpg "How moving window works")
 
 ## Installation
 
@@ -50,6 +50,6 @@ if __name__ == '__main__': main()
 
 ## Showcase
 This is a sample image
-![Plane.jpg image](https://raw.githubusercontent.com/Mamdasn/im2dhist/main/assests/Plane.jpg "Plane.jpg image")
+![Plane.jpg Image](https://raw.githubusercontent.com/Mamdasn/im2dhist/main/assets/Plane.jpg "Plane.jpg Image")
 Two dimensional histogram of the sample image
-![Two dimensional histogram](https://raw.githubusercontent.com/Mamdasn/im2dhist/main/assests/Plane-big-2D-Histogram.jpeg "Two dimensional histogram")
+![Two Dimensional Histogram](https://raw.githubusercontent.com/Mamdasn/im2dhist/main/assets/Plane-big-2D-Histogram.jpeg "Two Dimensional Histogram")
