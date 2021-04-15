@@ -31,7 +31,7 @@ def main():
 
     # 2*w_neighboring+1 is width of the square window around each pixel, when counting neiboring pixels
     # calculate 2 dimensional histogram of gray_image
-    v_image_2DHisteq = im2dhist(gray_image, w_neighboring=6, showProgress = True)
+    v_image_2DHisteq = im2dhist(gray_image, w_neighboring=6)
 
     # plots 2D-Histogram
     [K, _] = v_image_2DHisteq.shape
