@@ -1,16 +1,19 @@
 import numpy as np
 import numba
 
+import numba
 @numba.njit()
 def imhist(arr):
-    hist, _ = np.histogram(arr, bins=256, range=(0, 255))
-    return np.asarray(hist)
+    hist = np.zeros((256), dtype=np.int16)
+    for item in arr.copy().reshape(-1):
+        hist[item] += 1 
+    return hist
 
 @numba.njit()
 def im2dhist(image, w_neighboring = 6):
     V = image.copy()
     [h, w] = V.shape
-    V_hist = imhist(V.reshape(1, -1))
+    V_hist = imhist(V)
     
     X = (V_hist>0) * np.arange(1, 257)
     X = X[X>0]
@@ -24,16 +27,21 @@ def im2dhist(image, w_neighboring = 6):
     for i in range(K):
         [xi, yi] = np.where(V==(X[i]-1))
         
-        xi_tile = np.zeros((xi.size, 2*w_neighboring+1), dtype=np.int16)
-        yi_tile = np.zeros((yi.size, 2*w_neighboring+1), dtype=np.int16)
+        xi_n = np.zeros((xi.size, 2*w_neighboring+1), dtype=np.int16)
+        yi_n = np.zeros((yi.size, 2*w_neighboring+1), dtype=np.int16)
         for ii in range(2*w_neighboring+1):
-            xi_tile[:, ii] = xi
-            yi_tile[:, ii] = yi
-        xi_n = xi_tile + np.outer(np.ones(xi.size, dtype=np.int16), np.arange(-w_neighboring, w_neighboring+1))
-        yi_n = yi_tile + np.outer(np.ones(yi.size, dtype=np.int16), np.arange(-w_neighboring, w_neighboring+1))
+            xi_n[:, ii] = xi + (ii - w_neighboring)
+            yi_n[:, ii] = yi + (ii - w_neighboring)
     
-        xi_n = np.where(xi_n<h, xi_n, -1*np.ones_like(xi_n))
-        yi_n = np.where(yi_n<w, yi_n, -1*np.ones_like(yi_n))
+        for row_idx, xi_n_row in enumerate(xi_n):
+            for column_idx, item in enumerate(xi_n_row):
+                if item >= h:
+                    xi_n[row_idx, column_idx] = -1
+        for row_idx, yi_n_row in enumerate(yi_n):
+            for column_idx, item in enumerate(yi_n_row):
+                if item >= w:
+                    yi_n[row_idx, column_idx] = -1
+        
         
         for i_row in range(xi_n.shape[0]):
             xi_nr = xi_n[i_row, :] 
