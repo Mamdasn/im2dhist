@@ -1,7 +1,6 @@
 import numpy as np
 import numba
 
-import numba
 @numba.njit()
 def imhist(arr):
     hist = np.zeros((256), dtype=np.int16)
