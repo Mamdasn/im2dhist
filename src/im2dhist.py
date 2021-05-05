@@ -46,8 +46,6 @@ def im2dhist(image, w_neighboring = 6):
             neighboring_intens = V[xi_nr[0]:xi_nr[-1]+1, yi_nr[0]:yi_nr[-1]+1].copy().reshape(-1).astype(np.int16)
             
             for neighboring_inten in neighboring_intens:
-                #if i < X_inv[neighboring_inten]:
                     Hist2D[i, X_inv[neighboring_inten]-1] += np.abs(neighboring_inten+1-X[i]) +1
-    #Hist2D = Hist2D + np.tril(Hist2D.T, -1)
     Hist2D_normalized = Hist2D/np.sum(Hist2D)
     return Hist2D_normalized
