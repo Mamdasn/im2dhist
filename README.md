@@ -1,3 +1,8 @@
+[![PyPI Latest Release](https://img.shields.io/pypi/v/im2dhist.svg)](https://pypi.org/project/im2dhist/)
+[![Package Status](https://img.shields.io/pypi/status/im2dhist.svg)](https://pypi.org/project/im2dhist/)
+[![Downloads](https://pepy.tech/badge/im2dhist)](https://pepy.tech/project/im2dhist)
+[![License](https://img.shields.io/pypi/l/im2dhist.svg)](https://github.com/Mamdasn/im2dhist/blob/main/LICENSE)
+
 # im2dhist
 This small piece of code is intended to help researchers, especially in field of image processing, to easily calculate two dimensional histogram of a given image.
 
