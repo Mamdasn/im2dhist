@@ -2,7 +2,7 @@
 [![Package Status](https://img.shields.io/pypi/status/im2dhist.svg)](https://pypi.org/project/im2dhist/)
 [![Downloads](https://pepy.tech/badge/im2dhist)](https://pepy.tech/project/im2dhist)
 [![License](https://img.shields.io/pypi/l/im2dhist.svg)](https://github.com/Mamdasn/im2dhist/blob/main/LICENSE)
-![Repository Size](https://img.shields.io/github/languages/code-size/mamdasn/im2dhist)
+![Repository Size](https://img.shields.io/github/repo-size/mamdasn/im2dhist)
 
 
 # im2dhist
