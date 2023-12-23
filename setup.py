@@ -9,22 +9,29 @@ with codecs.open(os.path.join(parent_dir, "README.md"), encoding="utf-8") as rea
 
 
 setup(
-    name='im2dhist',
-    version='1.0.0',
+    name="im2dhist",
+    version="1.0.0",
     author="mamdasn s",
     author_email="<mamdassn@gmail.com>",
     url="https://github.com/Mamdasn/im2dhist",
-    description='Calculates two dimensional histogram of a given image.',
+    description="Calculates two dimensional histogram of a given image.",
     long_description=readme_description,
-    long_description_content_type = "text/markdown",
+    long_description_content_type="text/markdown",
     include_package_data=True,
-    package_dir={'': 'src'},
+    package_dir={"": "src"},
     py_modules=["im2dhist"],
     install_requires=[
         "numpy",
         "numba",
-        ],
-    keywords=['python', 'histogram', 'imhist', '2dhist', 'hist2d', 'two dimensional histogram'],
+    ],
+    keywords=[
+        "python",
+        "histogram",
+        "imhist",
+        "2dhist",
+        "hist2d",
+        "two dimensional histogram",
+    ],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Science/Research",

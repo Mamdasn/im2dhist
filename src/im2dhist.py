@@ -1,12 +1,14 @@
 import numpy as np
 import numba
 
+
 @numba.njit()
 def imhist(arr):
     hist = np.zeros(256, dtype=np.int32)
     for i in range(arr.shape[0]):
         hist[arr[i]] += 1
     return hist
+
 
 @numba.njit()
 def im2dhist(image, w_neighboring=6):
@@ -40,11 +42,14 @@ def im2dhist(image, w_neighboring=6):
             xi_nr = xi_nr[xi_nr >= 0]
             yi_nr = yi_nr[yi_nr >= 0]
 
-            neighboring_intens = V[xi_nr[0]:xi_nr[-1]+1, yi_nr[0]:yi_nr[-1]+1].ravel()
+            neighboring_intens = V[
+                xi_nr[0] : xi_nr[-1] + 1, yi_nr[0] : yi_nr[-1] + 1
+            ].ravel()
 
             for neighboring_inten in neighboring_intens:
-                Hist2D[i, X_inv[neighboring_inten]] += abs(neighboring_inten + 1 - X[i]) + 1
+                Hist2D[i, X_inv[neighboring_inten]] += (
+                    abs(neighboring_inten + 1 - X[i]) + 1
+                )
 
     Hist2D_normalized = Hist2D / np.sum(Hist2D)
     return Hist2D_normalized
-
